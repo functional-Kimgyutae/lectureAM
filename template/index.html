@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="app.css">    
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="slider">
+                <div class="box">
+                    <img src="images/01.png" alt="01.png">
+                </div>
+                <div class="box">
+                    <img src="images/04.png" alt="01.png">
+                </div>
+            </div>
+            <div class="controller">
+                <button class="controlBtn" id="prev">&lt;</button>
+                <button class="controlBtn" id="next">&gt;</button>
+            </div>    
+        </div>
+    </div>
+    
+    <script>
+        let img = 0;
+        $("#prev").on("click",()=> {
+            if(img == 1) {
+                $(".slider > .box").eq(0).animate({left:"0%"},500);
+                $(".slider > .box").eq(1).animate({left:"100%"},500);
+                img = 0;
+            }
+        });
+        $("#next").on("click",()=> {
+            if(img == 0) {
+                console.log("1");
+                $(".slider > .box").eq(0).animate({left:"-100%"},500);
+                $(".slider > .box").eq(1).animate({left:"0%"},500);
+                img = 1;
+            }
+        });
+    </script>
+</body>
+</html>
