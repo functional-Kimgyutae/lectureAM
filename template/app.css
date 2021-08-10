@@ -22,6 +22,7 @@
 }
 .content > .msg-box {
     width: 87px;
+    text-align: center;
     position: absolute;
     top: 10px;
     left: 50%;
@@ -37,7 +38,7 @@
 }
 
 .slider {
-    width: 1200px;
+    width: 2100px;
     height:300px;
     display: flex;
     position: relative;
@@ -74,3 +75,30 @@
 .controlBtn:hover {
     background-color: rgb(107, 141, 206);
 }
+
+.controlBtn:disabled {
+    background-color: rgb(107, 141, 206);
+}
+.indicator {
+    position: absolute;
+    width: 100%;
+    bottom: 110px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+.indicator > .pin {
+    width: 15px;
+    height: 15px;
+    background-color: rgb(185, 185, 185);
+    margin-right: 5px;
+    /* border: 1px solid #333; */
+    box-shadow: 0 0 2px 2px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.indicator > .pin.active {
+    background-color: rgb(24, 74, 240);
+}
+
