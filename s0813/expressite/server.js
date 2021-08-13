@@ -14,7 +14,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 //현재 폴더 밑에 있는 views 폴더를 app의 view 폴더로 설정을 해준다. 이 말은 모든 html을 여기에 넣겠다는 거다
 
-app.use(express.static(path.join(_dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 //hello 라고 요청하면 Hello world가 출력되도록 만들래.
 app.get("/msg", function(req, res){

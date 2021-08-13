@@ -22,11 +22,21 @@ function fetchCorona(callback){
         let value7 = $(".ca_value").eq(5).text().trim();
         let value8 = $(".ca_value").eq(6).text().trim();
         let value9 = $(".ca_value").eq(7).text().trim();
+        
+        let title1 = $(".s_title_in3").eq(0).text().trim();
+        let title2 = $(".s_title_in3").eq(1).text().trim();
+        let title3 = $(".s_title_in3").eq(2).text().trim();
+
+        let data1 = $(".data_table").eq(0).html();
+        let data2 = $(".data_table").eq(1).html();
+
         let recordData = {
             before:[value1, value2, value3],
             out:[value4, value5],
             in:[value6, value7],
-            dead:[value8, value9]
+            dead:[value8, value9],
+            title:[title1,title2,title3],
+            data:[data1,data2]
         }
         callback(recordData);
     })

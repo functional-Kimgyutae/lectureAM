@@ -7,11 +7,9 @@
     <title>코로나 현황</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="/app.css">
-    <style>
-
-    </style>
 </head>
 <body>
+    <h2><%= data.title[0] %></h2>
     <div class="container">
         <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
             <div class="card-header">전일대비</div>
@@ -43,5 +41,9 @@
             </div>
           </div>
     </div>
+    <h2><%= data.title[1] %></h2>
+        <%- data.data[0] %>
+    <h2><%= data.title[2] %></h2>
+    <%- data.data[1] %>
 </body>
 </html>
