@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코로나 현황</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="/app.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">전일대비</div>
+            <div class="card-body">
+              <p class="card-text">소계 : <%= data.before[0] %></p>
+              <p class="card-text">국내발생 : <%= data.before[1] %></p>
+              <p class="card-text">해외유입 : <%= data.before[2] %></p>
+            </div>
+          </div>
+          <div class="card text-white  bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">격리해제</div>
+            <div class="card-body">
+              <p class="card-text">누적 : <%= data.out[0] %></p>
+              <p class="card-text">전일대비 : <%= data.out[1] %></p>
+            </div>
+          </div>
+          <div class="card text-white bg-warning mb-3" style="max-width: 18rem;">
+            <div class="card-header">격리</div>
+            <div class="card-body">
+                <p class="card-text">누적 : <%= data.in[0] %></p>
+                <p class="card-text">전일대비 : <%= data.in[1] %></p>
+            </div>
+          </div>
+          <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+            <div class="card-header">사망</div>
+            <div class="card-body">
+                <p class="card-text">누적 : <%= data.dead[0] %></p>
+                <p class="card-text">전일대비 : <%= data.dead[1] %></p>
+            </div>
+          </div>
+    </div>
+</body>
+</html>
